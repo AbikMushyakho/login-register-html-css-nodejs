@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://www.google.com/recaptcha/api.js" defer async></script>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form id="signup_form">
+                <h1>Create Account</h1>
+
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input id="username" type="text" name="username" placeholder="Username" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input id="email" type="email" name="email" placeholder="Email" required>
+
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-phone"></i>
+                    <input id="phone_number" type="tel" name="phone_number" placeholder="Phone Number" required>
+                </div>
+
+                <div class="helper">
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input id="signup-password" type="password" name="signup_password"  placeholder="Password" required>
+
+                        <span id="signup-password-toggle">
+                            <i class="fa-solid fa-eye" id="signup-password-eye"></i>
+                        </span>
+                    </div>
+                    
+                    <span id="strength_meter" style="color:white ;" class="badge displayBadge"></span>
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input id="signup-confirmpassword" type="password" name="signup_confirm_password" placeholder="Confirm Password" required>
+                    <span id="signup-confirmpassword-toggle">
+                        <i class="fa-solid fa-eye" id="signup-confirmpassword-eye"></i>
+                    </span>
+                </div>
+
+                <div class="g-recaptcha" data-sitekey="6Ld4E3cgAAAAAL-XAQAZg2Br5FLsW3nCsDAaEcs4" > </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form id="login-form">  
+                <h1>Sign in</h1>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input id="signin-email" name="login-email" type="email" required placeholder="Email" >
+                </div>
+
+                <div class="helper">
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input id="signin-password" name="login-password" type="password" required placeholder="Password">
+
+                        <span id="signin-password-toggle">
+                            <i class="fa-solid fa-eye" id="signin-password-eye"></i>
+                        </span>
+                    </div>
+                </div>
+                <a href="/forget_password">Forgot your password?</a>
+                <button type="submit">Login</button>
+            </form>
+
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!!</h1>
+                    <p>Enter your personal details and start journey with us.</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello!</h1>
+                    <p>To keep connected with us please login with your personal info.</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/swal_function.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/password_strength.js"></script>
+    <script src="/js/signup.js"></script>
+    <script src="/js/login.js"></script>
+
+</body>
+
+</html>

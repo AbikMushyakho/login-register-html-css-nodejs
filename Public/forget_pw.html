@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget password</title>
+    <link rel="stylesheet" href="/css/forget_pw.css">
+</head>
+
+<body>
+    <div class="container-center">
+   
+        <h2>Don't Worry!</h2>
+        <form id="forget_pw">
+            <h4>
+                Forget Password?
+            </h4>
+            <formgroup>
+                <input type="text" name="email" required/>
+                <label for="email"><br>Email</label>
+                <span>enter your email</span>
+                <br>
+            </formgroup>
+            <button id="login-btn" type="submit">Next</button>
+        </form>
+
+        <p>Did you remember? <a href="/login_register">Sign In</a></p>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/swal_function.js"></script>
+    <script src="/js/forget_pw.js"></script>
+</body>
+</html>
